@@ -1,0 +1,115 @@
+main {
+    display: grid;
+    grid-template-areas: "h h h h"
+                         "n n n n"
+                         "as ar ar ar"
+                         "f f f f";
+    margin: auto;
+    max-width: 800px;
+    /* border: 1px solid black; */
+    text-align: center;
+}
+
+main * {
+    border-radius: 5px;
+}
+
+header {
+    grid-area: h;
+    background-color: #66b3ff;
+    border: 2px solid #3366ff;
+    margin-bottom: 10px;
+}
+
+header .focim {
+    color: white;
+    letter-spacing: 2px;
+}
+
+nav {
+    grid-area: n;
+    background-color: #668cff;
+    border: 2px solid #3366ff;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 5px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: gold;
+    padding: 5px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    background-color: #66b3ff;
+    border: 2px solid #66b3ff;
+    /* border-radius: 5px; */
+}
+
+aside {
+    grid-area: as;
+    background-color: #66b3ff;
+    border: 2px solid #3366ff;
+    margin: 0 10px 10px 0;
+}
+
+aside img {
+    padding: 1px 1px 6px 1px;
+}
+
+.story-article {
+    grid-area: ar;
+    background-color: #66b3ff;
+    border: 2px solid #3366ff;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.gallery-article img {
+    border: 2px solid #3366ff;
+    margin: 6px;
+}
+
+footer {
+    grid-area: f;
+    background-color: #66b3ff;
+    border: 2px solid #3366ff;
+    padding: 10px;
+    color: white;
+}
+
+
+@media screen and (max-width: 500px) {
+    main {
+        grid-template-areas: "h"
+                             "n"
+                             "as"
+                             "ar"
+                             "f";
+    }
+
+    nav ul li {
+        display: block;
+        text-align: center;
+        margin-right: 40px;
+    }
+
+    aside {
+        margin-right: 0;
+    }
+
+    .story-article h3 {
+        text-align: center;
+    }
+
+    .gallery-article img {
+        width: 200px;
+    }
+}
